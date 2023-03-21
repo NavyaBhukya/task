@@ -1,0 +1,21 @@
+<div class="text-secondary text-center">
+    <table class="border">
+
+        <tr>
+
+            <th scope="col" class="col-1">Select</th>
+            <th scope="col" class="col-3">To</th>
+            <th scope="col" class="col-3">Subject</th>
+            <th scope="col" class="col-4">Message</th>
+            <th scope="col" class="col-1">Time</th>
+        </tr>
+        <tr *ngFor="let sentDat of sentDataArray ">
+            <td class="col-1"><input type="checkbox"></td>
+            <td class="col-3">{{sentDat.to}}</td>
+            <td class="col-3">{{sentDat.subject}}</td>
+            <td class="col-4">{{sentDat.message}}</td>
+            <td class="col-1"> {{ currentTime | date:'shortTime' }}
+            </td>
+        </tr>
+    </table>
+</div>

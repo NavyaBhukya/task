@@ -1,0 +1,83 @@
+<!-- <table class="table table-striped glyphicon-hover">
+<tr>
+    <td><input type="checkbox"></td>
+    <td><i class="fa-solid fa-star star"></i></td>
+    <td>Navya Bhukya</td>
+    <td>Subject Of the Email</td>
+    <td>Good morning  sir , this is ti inform</td>
+    <td>8.15pm</td>
+    
+    
+</tr>
+
+</table>
+<hr style="color: aliceblue;"/> -->
+<!-- <div class="input-elements">
+    <input class="input-elements" type="checkbox">
+    <span class="input-elements"><i class="fa-solid fa-star star"></i></span>
+    <span class="input-elements">Navya Bhukya</span>
+    <span class="input-elements" >Subject Of The Mail</span>
+    <span class="input-elements" >Description of the mail goes here</span>
+    <span class="input-elements">9.52am</span>
+</div>
+<hr>
+<div class="input-elements">
+    <input class="input-elements" type="checkbox">
+    <span class="input-elements"><i class="fa-solid fa-star star"></i></span>
+    <span class="input-elements">Navya Bhukya</span>
+    <span class="input-elements" >Subject Of The Mail</span>    
+    <span class="input-elements" >Description of the mail goes here</span>
+    <span class="input-elements">9.52am</span>
+</div>
+<hr>
+<div class="input-elements">
+    <input class="input-elements" type="checkbox">
+    <span class="input-elements"><i class="fa-solid fa-star star"></i></span>
+    <span class="input-elements">Navya Bhukya</span>
+    <span class="input-elements" >Subject Of The Mail</span>
+    <span class="input-elements" >Description of the mail goes here</span>
+    <span class="input-elements">9.52am</span>
+</div>
+<hr>
+<div class="input-elements">
+    <input class="input-elements" type="checkbox">
+    <span class="input-elements"><i class="fa-solid fa-star star"></i></span>
+    <span class="input-elements">Navya Bhukya</span>
+    <span class="input-elements" >Subject Of The Mail</span>
+    <span class="input-elements" >Description of the mail goes here</span>
+    <span class="input-elements">9.52am</span>
+</div>
+<hr>
+<div class="input-elements">
+    <input class="input-elements" type="checkbox">
+    <span class="input-elements"><i class="fa-solid fa-star star"></i></span>
+    <span class="input-elements">Navya Bhukya</span>
+    <span class="input-elements" >Subject Of The Mail</span>
+    <span class="input-elements" >Description of the mail goes here</span>
+    <span class="input-elements">9.52am</span>
+</div>
+<hr> -->
+
+
+<div class="text-secondary text-center">
+    <table class="border">
+
+        <tr>
+
+            <th scope="col" class="col-1">Select</th>
+            <th scope="col" class="col-3">To</th>
+            <th scope="col" class="col-3">Subject</th>
+            <th scope="col" class="col-4">Message</th>
+            
+        </tr>
+        <tr *ngFor="let sentDat of sentDataArray ">
+            <td class="col-1"><input type="checkbox"></td>
+            <td class="col-3">{{sentDat.to}}</td>
+            <td class="col-3">{{sentDat.subject}}</td>
+            <td class="col-4">{{sentDat.message}}</td>
+            <!-- <td class="col-1"> {{ currentTime | date:'shortTime' }}
+            </td> -->
+        </tr>
+
+    </table>
+</div>

@@ -1,0 +1,77 @@
+<mat-toolbar>
+  <mat-toolbar-row class="header">
+    <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+    <button mat-button>Email</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="side">
+    <mat-list>
+      <div>
+        <a routerLink="/inbox" routerLinkActive="active">
+          <button class="button" routerLink="inbox" routerLinkActive="routerActive">Inbox</button>
+        </a>
+
+      </div>
+      <div>
+        <button class="button" routerLink="sent" routerLinkActive="routerActive">Sent</button>
+      </div>
+      <div><a>
+          <button routerLink="draft" routerLinkActive="routerActive" class="button">Draft</button>
+        </a>
+
+      </div>
+      <div>
+        <button class="button" (click)="showPositionDialog('bottom-right')">Create</button>
+      </div>
+
+
+
+
+
+
+
+
+    </mat-list>
+    <p-dialog header=" Create a New Message" [(visible)]="displayPosition" [position]="position" [modal]="true"
+      id="dialog-form" [style]="{width: '35vw', height:'500px'}" [draggable]="false" [resizable]="false">
+
+
+      <form #mailForm="ngForm">
+
+        <input class="input" type="text" name="to" [(ngModel)]="dataObj.to" class="form-control"
+          style="border: none; border-bottom: 1px solid; width: 400px; margin-top: 20px; outline: none;"
+          placeholder="To" required>
+        <input class="input" type="text" name="subject" [(ngModel)]="dataObj.subject"
+          style="border: none; border-bottom: 1px solid; width: 400px; margin-top: 20px; outline: none;"
+          class="form-control" placeholder="Subject" required>
+        <textarea name="message" [(ngModel)]="dataObj.message" class="form-control"
+          style="border:none; outline: none; height: 210px; width: 400px; margin-top: 20px;" required></textarea>
+
+      </form>
+
+
+
+      <button class="btn" type="button" class="btn btn-primary" (click)="sendMail(mailForm);">Send</button>
+
+      <button class="btn1" type="button" (click)="displayPosition=false" class="btn btn-light">Cancel</button>
+
+    </p-dialog>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p-dialog header="Title" [visible]="false">content</p-dialog>
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<p-dialog header="Title" [visible]="false">content</p-dialog>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+
+  </div>
+</div>

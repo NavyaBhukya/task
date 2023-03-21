@@ -1,0 +1,20 @@
+.inbox-container{
+    width: calc(100%-200px);
+    height: 100vh;
+}
+td{
+    padding: 20px;
+}
+.input-elements{
+    padding: 10px;
+    color: black;
+   
+}
+th {
+    padding: 20px;
+    color: black;
+}
+
+td {
+    font-size: 15px;
+}
