@@ -19,7 +19,7 @@ export class SentComponent implements DoCheck {
   ngDoCheck(): void {
     this.getSentData();
   }
-  ngOnInit() { 
+  ngOnInit() {
     this.getSentData();
   }
   public getSentData(): void {

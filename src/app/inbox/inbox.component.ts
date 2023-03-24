@@ -11,23 +11,28 @@ export class InboxComponent {
     {
       "to":"Navya Bhukya",
       "subject":"About Leave",
-      "message":"This To Inform u That I am taking"
+      "message":"This To Inform u That I am taking",
+      "time":"5.33PM"
     },{
       "to":" Srija Katla",
       "subject":"Techical Issue",
-      "message":"This To Inform u That Technical issue"
+      "message":"This To Inform u That Technical issue",
+      "time":"4.03PM"
     },{
       "to":"Mahesh B",
       "subject":"Sick Leave",
-      "message":"This To Inform u That sick leave"
+      "message":"This To Inform u That sick leave",
+      "time":"11.56AM"
     },{
       "to":"Pavan R",
       "subject":"Work from Home",
-      "message":"This To Inform u That work from home"
+      "message":"This To Inform u That work from home",
+      "time":"7.33PM"
     },{
       "to":"Raghu M",
       "subject":"Leave",
-      "message":"This To Inform u That leave"
+      "message":"This To Inform u That leave",
+      "time":"9.20AM"
     }
   ]
 }

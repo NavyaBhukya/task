@@ -28,9 +28,6 @@ const routes: Routes = [
   ]
  },
   { path: 'login', component: LoginComponent },
-  // { path: 'sent', component: SentComponent },
-  
-
 ];
 
 @NgModule({

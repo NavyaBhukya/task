@@ -24,6 +24,7 @@ import { MatButtonModule} from '@angular/material/button'
 import { DialogModule } from "primeng/dialog";
 import {ButtonModule} from 'primeng/button';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CommonModule } from '@angular/common';
     CreateComponent,
     InboxComponent,
     DraftComponent,
+    FooterComponent,
     
   ],
   imports: [
@@ -50,9 +52,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     ButtonModule,
     MatButtonModule,MatSidenavModule,MatToolbarModule,MatMenuModule,MatIconModule,MatDividerModule,MatListModule
-    
-  
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

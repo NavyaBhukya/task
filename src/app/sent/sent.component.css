@@ -3,6 +3,21 @@ th {
     color: black;
 }
 
+
 td {
-    font-size: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid purple;
+    border-left: none;
+    border-right: none;
+    padding: 12px;
+}
+
+th {
+    background-color: purple;
+    color: white;
+}
+
+th:hover {
+    background-color: #e9c4f5;
+    color: purple;
 }

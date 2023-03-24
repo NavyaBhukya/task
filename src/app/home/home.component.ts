@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
 import { DataServeiceService } from '../data-serveice.service';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
   opened = true;
   displayPosition: boolean | undefined;
   position!: string;
 
-  constructor( public dataService:DataServeiceService) { }
+  constructor(public dataService: DataServeiceService, private fb: FormBuilder) { }
   ngOnInit(): void {
-    // const localData = localStorage.getItem('emailData');
-    // if(localData != null){
-    //   this.dataArray = JSON.parse(localData);
-    // }
+
   }
   showModal() {
 
@@ -38,32 +37,34 @@ export class HomeComponent {
       notnull.style.display = 'none';
     }
   }
+  createForm = new FormGroup({
+    to: new FormControl("", [Validators.required]),
+    subject: new FormControl("", [Validators.required,]),
+    message: new FormControl("", [Validators.required,])
 
-  
-  
+  })
+ formValid() {
+    if (this.createForm.valid) {
+      console.log(this.createForm.value);
+      this.dataService.sentData(this.dataObj)
 
-  sendMail(data: { value: { to: string; subject: string; message: string; }; }) {
-    console.log(data);
-    console.log(typeof(data));
+      this.displayPosition = false
 
-    this.dataObj = {
-      to: data.value.to,
-      subject: data.value.subject,
-      message: data.value.message
+      this.dataObj = {
+        to: '',
+        subject: '',
+        message: ''
+      }
+      alert("Message Sent")
+
+    } else {
+      console.log('this is invalid input')
+      alert("Please Enter required Details!")
     }
-    this.dataService.sentData(this.dataObj)
-    // console.log(this.dataObj);
-
-    // this.dataArray.push(this.dataObj);
-  
-    // localStorage.setItem('emailData', JSON.stringify(this.dataArray));
-    this.displayPosition=false
-    // this.mailForm.reser()
-    this.dataObj ={
-    to: '',
-    subject: '',
-    message: ''
-    }
-
   }
+
+}
+
+function sendMail(data: any, arg1: { value: { to: any; subject: any; message: any; }; }) {
+  throw new Error('Function not implemented.');
 }
